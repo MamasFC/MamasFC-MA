@@ -19,10 +19,10 @@ interface Player {
 
 const players: Player[] = [
   // Activos
-  { id: 1, name: "Duraznito", position: "Defensor", number: 1, category: "activos", role: "DT", image: "public/Escudos/Plantel/MAMAS FC (1).jpg"},
+  { id: 1, name: "Duraznito", position: "Defensor", number: 1, category: "activos", role: "DT", image: "/Escudos/Plantel/MAMAS FC (1).jpg"},
   { id: 2, name: "Ruud Gullit", position: "Defensor", number: 2, category: "activos", role: "Capitán", image: "/Escudos/Plantel/MAMAS FC (2).jpg"},
-  { id: 3, name: "Gersinho", position: "Defensor", number: 3, category: "activos", image: "/Plantel/MAMAS FC (5).jpg"},
-  { id: 4, name: "Hellfire", position: "Defensor", number: 4, category: "activos" },
+  { id: 3, name: "Gersinho", position: "Defensor", number: 3, category: "activos", image: "/Escudos/Plantel/MAMAS FC (5).jpg"},
+  { id: 4, name: "Hellfire", position: "Defensor", number: 4, category: "activos", image: "/Escudos/Plantel/MAMAS FC (12).jpg"},
   { id: 5, name: "Chisito MVP", position: "Arquero", number: 5, category: "activos" },
   { id: 6, name: "Campera", position: "Mediocampista", number: 6, category: "activos" },
   { id: 7, name: "Aleman", position: "Mediocampista", number: 7, category: "activos" },
@@ -30,15 +30,18 @@ const players: Player[] = [
   { id: 9, name: "DPL", position: "Delantero", number: 9, category: "activos" },
   { id: 10, name: "FCB", position: "Delantero", number: 10, category: "activos" },
   { id: 11, name: "German Lux", position: "Arquero", number: 11, category: "activos" },
-  { id: 12, name: "Bojrja", position: "Arquero", number: 12, category: "activos" },
+  { id: 12, name: "Borja", position: "Arquero", number: 12, category: "activos" },
+  { id: 13, name: "Bnnx", position: "Delantero", number: 13, category: "activos", image: "/Escudos/Plantel/MAMAS FC (10).jpg"}, 
 
   // Leyendas
-  { id: 13, name: "Franki", position: "Mediocampista", number: 13, category: "leyendas" },
-  { id: 14, name: "Gio", position: "Delantero", number: 14, category: "leyendas" },
-  { id: 16, name: "Caucho", position: "Delantero", number: 15, category: "leyendas" },
+  { id: 14, name: "Franki", position: "Mediocampista", number: 13, category: "leyendas" },
+  { id: 15, name: "Gio", position: "Delantero", number: 14, category: "leyendas" },
+  { id: 16, name: "Caucho", position: "Delantero", number: 15, category: "leyendas", image: "/Escudos/Plantel/MAMAS FC (4).jpg" },
   { id: 17, name: "Prime", position: "Delantero", number: 16, category: "leyendas" },
-  { id: 18, name: "Sharaawy", position: "Mediocampista", number: 17, category: "leyendas", image: "/Plntel/MAMAS FC (3).jpg"},
+  { id: 18, name: "Sharaawy", position: "Mediocampista", number: 17, category: "leyendas", image: "/Escudos/Plantel/MAMAS FC (3).jpg"},
   { id: 19, name: "Dylan", position: "Delantero", number: 18, category: "leyendas" },
+  { id: 19, name: "Di Maria", position: "Delantero", number: 19, category: "leyendas", image: "/Escudos/Plantel/MAMAS FC (11).jpg" },
+
 
   // Especiales
  // { id: 1, name: "Duraznito", position: "Defensor", number: 1, category: "especiales", role: "DT" },
