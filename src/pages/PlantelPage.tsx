@@ -19,7 +19,7 @@ interface Player {
 
 const players: Player[] = [
   // Activos
-  { id: 1, name: "Duraznito", position: "Defensor", number: 1, category: "activos", role: "DT", image: "src/assets/Plantel/MAMAS FC (1).jpg"},
+  { id: 1, name: "Duraznito", position: "Defensor", number: 1, category: "activos", role: "DT", image: "/assets/Plantel/MAMAS FC (1).jpg"},
   { id: 2, name: "Ruud Gullit", position: "Defensor", number: 2, category: "activos", role: "Capitán", image: "src/assets/Plantel/MAMAS FC (2).jpg"},
   { id: 3, name: "Gersinho", position: "Defensor", number: 3, category: "activos", image: "src/assets/Plantel/MAMAS FC (5).jpg"},
   { id: 4, name: "Hellfire", position: "Defensor", number: 4, category: "activos" },
