@@ -65,8 +65,8 @@ const NextMatch = () => {
               <div className="text-center">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-sm bg-muted flex items-center justify-center mb-3">
                   <img 
-                     src="/Hawks.jpg" 
-                     alt="Mamas FC" 
+                     src="src/assets/Escudos/Hawks.jpg" 
+                     alt="Hawks FC" 
                       className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
                      />
                 </div>

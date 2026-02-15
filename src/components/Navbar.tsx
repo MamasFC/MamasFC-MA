@@ -23,7 +23,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-sm  flex items-center justify-center">
               <img 
-  src="/assets/Escudos/EscudoVerde.jpg" 
+  src="/EscudoVerde.jpg" 
   alt="Mamas FC" 
   className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
 />
