@@ -57,7 +57,7 @@ const NextMatch = () => {
 
               <div className="text-center">
                 <span className="font-display text-3xl sm:text-4xl font-bold text-muted-foreground">VS</span>
-                <div className="mt-1 text-xs font-body text-muted-foreground">SÁB 21/02 · 20:00</div>
+                <div className="mt-1 text-xs font-body text-muted-foreground">MARTES 17/02 · 21:00</div>
                 <div className="mt-1 px-2 py-0.5 bg-secondary/20 text-secondary font-display text-[10px] tracking-wider">PEGECHE</div>
               </div>
               

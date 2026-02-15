@@ -267,3 +267,4 @@ const cupStarted = false; // 🔥 cambiar a true cuando comiencen las copas
 };
 
 export default TablaPage;
+
