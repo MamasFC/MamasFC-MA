@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const targetDate = new Date("2026-02-14T17:32:00");
+const targetDate = new Date("2026-02-17T21:00:00");
 
 const NextMatch = () => {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
@@ -47,7 +47,7 @@ const NextMatch = () => {
               <div className="text-center">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-sm bg-primary/20 border border-primary/30 flex items-center justify-center mb-3">
                   <img 
-                     src="src/assets/Escudos/EscudoVerde.jpg" 
+                     src="/EscudoVerde.jpg" 
                      alt="Mamas FC" 
                       className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
                      />
@@ -65,7 +65,7 @@ const NextMatch = () => {
               <div className="text-center">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-sm bg-muted flex items-center justify-center mb-3">
                   <img 
-                     src="src/assets/Escudos/Hawks.jpg" 
+                     src="/Hawks.jpg" 
                      alt="Mamas FC" 
                       className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
                      />
