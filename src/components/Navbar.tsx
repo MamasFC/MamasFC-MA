@@ -21,14 +21,14 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-sm  flex items-center justify-center">
+            <div className="w-8 h-8 rounded-sm flex items-center justify-center">
               <img 
-  src="/EscudoVerde.jpg" 
-  alt="Mamas FC" 
-  className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
-/>
+                src="/EscudoVerde.jpg" 
+                alt="Mamas FC" 
+                className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+              />
             </div>
-            <span className="font-display text-lg font-bold tracking-wider text-foreground">
+            <span className="font-sans text-lg font-bold tracking-wider text-foreground">
               MAMAS FC
             </span>
           </Link>
@@ -40,7 +40,7 @@ const Navbar = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className="relative px-4 py-2 font-display text-sm font-medium tracking-wider transition-colors"
+                  className="relative px-4 py-2 font-sans text-sm font-medium tracking-wider transition-colors"
                 >
                   <span className={isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"}>
                     {item.label}
@@ -79,7 +79,7 @@ const Navbar = () => {
                     key={item.path}
                     to={item.path}
                     onClick={() => setIsOpen(false)}
-                    className={`block px-4 py-3 font-display text-sm tracking-wider transition-colors ${
+                    className={`block px-4 py-3 font-sans text-sm tracking-wider transition-colors ${
                       isActive ? "text-primary bg-muted" : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                     }`}
                   >

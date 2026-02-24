@@ -10,6 +10,8 @@ import PlantelPage from "./pages/PlantelPage";
 import HistoriaPage from "./pages/HistoriaPage";
 import TablaPage from "./pages/TablaPage";
 import NotFound from "./pages/NotFound";
+import LigasJugadas from "./pages/LigasJugadas";
+
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,7 @@ const App = () => (
           <Route path="/historia" element={<HistoriaPage />} />
           <Route path="/tabla" element={<TablaPage />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/ligas-jugadas" element={<LigasJugadas />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

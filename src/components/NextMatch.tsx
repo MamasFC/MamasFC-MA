@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const targetDate = new Date("2026-02-18T21:23:00");
+const targetDate = new Date("2026-02-23T23:00:00");
 
 const NextMatch = () => {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
@@ -57,7 +57,7 @@ const NextMatch = () => {
 
               <div className="text-center">
                 <span className="font-display text-3xl sm:text-4xl font-bold text-muted-foreground">VS</span>
-                <div className="mt-1 text-xs font-body text-muted-foreground">MARTES 18/02 · 23:00</div>
+                <div className="mt-1 text-xs font-body text-muted-foreground">LUNES 23/02 · 23:00</div>
                 <div className="mt-1 px-2 py-0.5 bg-secondary/20 text-secondary font-display text-[10px] tracking-wider">PEGECHE</div>
               </div>
               
@@ -65,12 +65,12 @@ const NextMatch = () => {
               <div className="text-center">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-sm bg-muted flex items-center justify-center mb-3">
                   <img 
-                     src="/Escudos/Hawks.jpg" 
+                     src="/Escudos/LDR.jpg" 
                      alt="Hawks FC" 
                       className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
                      />
                 </div>
-                <span className="font-display text-sm tracking-wider text-muted-foreground font-semibold">HAWKS FC</span>
+                <span className="font-display text-sm tracking-wider text-muted-foreground font-semibold">DIABLOS ROJOS</span>
               </div>
             </div>
 
