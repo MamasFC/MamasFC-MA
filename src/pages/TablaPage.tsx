@@ -43,11 +43,11 @@ const jrsTable: TeamStanding[] = [
 ];
 
 const pegecheTable: TeamStanding[] = [
-  { pos: 1, team: "Monogamia FC", pj: 1, pg: 1, pe: 0, pp: 0, gf: 3, gc: 0, pts: 3 },
-  { pos: 2, team: "Los Diablos Rojos", pj: 1, pg: 1, pe: 0, pp: 0, gf: 3, gc: 2, pts: 3 },
-  { pos: 3, team: "Mamas FC", pj: 1, pg: 1, pe: 0, pp: 0, gf: 1, gc: 0, pts: 3, isMamas: true },
-  { pos: 4, team: "Hawks FC", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 3, pts: 0 },
-  { pos: 5, team: "White Panther Kings", pj: 1, pg: 0, pe: 0, pp: 1, gf: 0, gc: 1, pts: 0 },
+  { pos: 1, team: "Mamas FC", pj: 4, pg: 4, pe: 0, pp: 0, gf: 8, gc: 1, pts: 12, isMamas: true },
+  { pos: 2, team: "White Panther Kings", pj: 4, pg: 0, pe: 0, pp: 1, gf: 0, gc: 1, pts: 9 },
+  { pos: 3, team: "Los Diablos Rojos", pj: 4, pg: 1, pe: 0, pp: 0, gf: 3, gc: 2, pts: 5 },
+  { pos: 4, team: "Hawks FC", pj: 4, pg: 0, pe: 0, pp: 1, gf: 0, gc: 3, pts: 4 },
+  { pos: 5, team: "Monogamia FC", pj: 2, pg: 1, pe: 1, pp: 0, gf: 4, gc: 2, pts: 4 },
   { pos: 6, team: "Backyarigans FC", pj: 1, pg: 0, pe: 0, pp: 0, gf: 0, gc: 3, pts: 0 },
 ];
 

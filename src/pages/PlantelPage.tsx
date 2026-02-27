@@ -34,13 +34,13 @@ const players: Player[] = [
   { id: 13, name: "Bnnx", position: "Delantero", number: 13, category: "activos", image: "/Escudos/Plantel/MAMAS FC (10).jpg"}, 
 
   // Leyendas
-  { id: 14, name: "Franki", position: "Mediocampista", number: 13, category: "leyendas" },
-  { id: 15, name: "Gio", position: "Delantero", number: 14, category: "leyendas" },
-  { id: 16, name: "Caucho", position: "Delantero", number: 15, category: "leyendas", image: "/Escudos/Plantel/MAMAS FC (4).jpg" },
-  { id: 17, name: "Prime", position: "Delantero", number: 16, category: "leyendas" },
-  { id: 18, name: "Sharaawy", position: "Mediocampista", number: 17, category: "leyendas", image: "/Escudos/Plantel/MAMAS FC (3).jpg"},
-  { id: 19, name: "Dylan", position: "Delantero", number: 18, category: "leyendas" },
-  { id: 19, name: "Di Maria", position: "Delantero", number: 19, category: "leyendas", image: "/Escudos/Plantel/MAMAS FC (11).jpg" },
+  { id: 14, name: "Franki", position: "Mediocampista", number: 14, category: "leyendas" },
+  { id: 15, name: "Gio", position: "Delantero", number: 15, category: "leyendas" },
+  { id: 16, name: "Caucho", position: "Delantero", number: 16, category: "leyendas", image: "/Escudos/Plantel/MAMAS FC (4).jpg" },
+  { id: 17, name: "Prime", position: "Delantero", number: 17, category: "leyendas" },
+  { id: 18, name: "Sharaawy", position: "Mediocampista", number: 18, category: "leyendas", image: "/Escudos/Plantel/MAMAS FC (3).jpg"},
+  { id: 19, name: "Dylan", position: "Delantero", number: 19, category: "leyendas" },
+  { id: 20, name: "Di Maria", position: "Delantero", number: 20, category: "leyendas", image: "/Escudos/Plantel/MAMAS FC (11).jpg" },
 
 
   // Especiales

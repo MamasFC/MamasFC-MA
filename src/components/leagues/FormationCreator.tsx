@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from "react";
+import { useState, useRef, useCallback } from "react";
 import type { LeagueConfig, FieldPlayer, Substitution, Player } from "@/data/leagues";
 import { JERSEY_STYLES } from "@/data/leagues";
 import { getPlayersForLeague } from "@/data/leagues";
@@ -6,6 +6,7 @@ import { FootballField } from "./FootballField";
 import { PlayerListPanel } from "./PlayerListPanel";
 import { SubstitutionsPanel } from "./SubstitutionsPanel";
 import { ExportButton } from "./ExportButton";
+import { FormationHistory, type SavedFormation } from "./FormationHistory";
 import { RectangleHorizontal, RectangleVertical } from "lucide-react";
 
 export function FormationCreator({ league }: { league: LeagueConfig }) {
@@ -64,6 +65,13 @@ export function FormationCreator({ league }: { league: LeagueConfig }) {
     setCustomPlayers((prev) => [...prev, { id, name, leagueIds: [league.id], position }]);
   }, [league.id]);
 
+  const handleLoadFormation = useCallback((formation: SavedFormation) => {
+    setFieldPlayers(formation.fieldPlayers);
+    setSubstitutions(formation.substitutions);
+    setJerseyStyleId(formation.jerseyStyleId);
+    setOrientation(formation.orientation);
+  }, []);
+
   // Build jersey preview for selector
   const renderJerseyPreview = (jersey: typeof JERSEY_STYLES[0], isActive: boolean) => {
     const stripes = jersey.colors.length;
@@ -118,10 +126,10 @@ export function FormationCreator({ league }: { league: LeagueConfig }) {
         </div>
       </div>
 
-      {/* Formation area */}
-      <div ref={exportRef} className="relative space-y-4 bg-background p-4 rounded-xl">
-        <div className="flex flex-col lg:flex-row gap-4">
-          <div className="flex-1 min-w-0">
+      {/* 🔧 ARREGLADO: Export ref solo envuelve la cancha, NO el panel de jugadores */}
+      <div className="flex flex-col lg:flex-row gap-4">
+        <div className="flex-1 min-w-0">
+          <div ref={exportRef} className="relative bg-background p-4 rounded-xl">
             <FootballField
               league={league}
               fieldPlayers={fieldPlayers}
@@ -132,33 +140,33 @@ export function FormationCreator({ league }: { league: LeagueConfig }) {
               jerseyStyle={currentJersey}
               orientation={orientation}
             />
-          </div>
-          <div className="lg:w-64 shrink-0">
-            <PlayerListPanel
-              league={league}
-              benchPlayers={benchPlayers}
-              fieldPlayerIds={fieldPlayerIds}
-              isMaxReached={isMaxReached}
-              onAddPlayer={handleAddPlayer}
-            />
+
+            {/* ✅ ARREGLADO: Overlay de cambios solo visible al exportar, dentro del ref de export */}
+            {isExporting && substitutions.length > 0 && (
+              <div className="absolute top-6 right-6 z-20 bg-background/90 border border-border/50 rounded-lg p-3 max-w-[200px]">
+                <h4 className="font-display font-bold text-[10px] tracking-wider text-muted-foreground mb-2">CAMBIOS 2T</h4>
+                <div className="space-y-1.5">
+                  {substitutions.map((sub) => (
+                    <div key={sub.id} className="text-[11px] font-body">
+                      <span className="text-destructive">↓ {allPlayers.find(p => p.id === sub.playerOut)?.name}</span>
+                      {" → "}
+                      <span className="text-primary">↑ {allPlayers.find(p => p.id === sub.playerIn)?.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
-
-        {/* Substitutions overlay for export - positioned top-right */}
-        {substitutions.length > 0 && (
-          <div className={`absolute top-6 right-6 z-20 bg-background/90 border border-border/50 rounded-lg p-3 max-w-[200px] ${isExporting ? 'block' : 'hidden'}`}>
-            <h4 className="font-display font-bold text-[10px] tracking-wider text-muted-foreground mb-2">CAMBIOS 2T</h4>
-            <div className="space-y-1.5">
-              {substitutions.map((sub) => (
-                <div key={sub.id} className="text-[11px] font-body">
-                  <span className="text-destructive">↓ {allPlayers.find(p => p.id === sub.playerOut)?.name}</span>
-                  {" → "}
-                  <span className="text-primary">↑ {allPlayers.find(p => p.id === sub.playerIn)?.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+        <div className="lg:w-64 shrink-0">
+          <PlayerListPanel
+            league={league}
+            benchPlayers={benchPlayers}
+            fieldPlayerIds={fieldPlayerIds}
+            isMaxReached={isMaxReached}
+            onAddPlayer={handleAddPlayer}
+          />
+        </div>
       </div>
 
       <SubstitutionsPanel
@@ -169,6 +177,15 @@ export function FormationCreator({ league }: { league: LeagueConfig }) {
         substitutions={substitutions}
         onAdd={handleAddSubstitution}
         onRemove={handleRemoveSubstitution}
+      />
+
+      <FormationHistory
+        leagueId={league.id}
+        currentFieldPlayers={fieldPlayers}
+        currentSubstitutions={substitutions}
+        currentJerseyStyleId={jerseyStyleId}
+        currentOrientation={orientation}
+        onLoad={handleLoadFormation}
       />
 
       <div className="flex justify-center">
